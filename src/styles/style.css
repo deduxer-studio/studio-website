@@ -1,22 +1,233 @@
-.js-badge {
-  position: fixed;
-  top: 32px;
-  left: 32px;
-  border-radius: 16px;
-  background-color: lightblue;
-  color: black;
-  padding: 8px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  line-height: 1.2;
-  font-size: 14px;
-  cursor: pointer;
-  z-index: 10000;
-  transition: background-color .1s ease-out;
+html {
+  font-size: 1.125rem;
 }
 
-.js-badge:hover {
-  background-color: rgb(228, 137, 193);
+@media screen and (max-width:1920px) {
+  html {
+    font-size: calc(0.625rem + 0.41666666666666674vw);
+  }
+}
+
+@media screen and (max-width:1440px) {
+  html {
+    font-size: calc(0.8126951092611863rem + 0.20811654526534862vw);
+  }
+}
+
+@media screen and (max-width:479px) {
+  html {
+    font-size: calc(0.7494769874476988rem + 0.8368200836820083vw);
+  }
+}
+
+.heading-wrap {
+  opacity: 0;
+}
+
+.main_info.par .char {
+  overflow-y: hidden;
+}
+
+/* .testimonial-itself .line:nth-child(1) {
+  transform: translateX('10%');
+} */
+.swiper-slide-active .line {
+  overflow-y: hidden;
+}
+
+.swiper-slide .line {
+  overflow-y: hidden;
+}
+
+.swiper-slide .word {
+  transform: translateY(-100%);
+  transition-delay: 0ms;
+  transition-duration: 450ms;
+}
+
+.swiper-slide-active .word {
+  transform: translateY(0%);
+  transition-delay: 400ms;
+  transition-duration: 600ms;
+
+}
+
+
+.swiper-slide .client-image {
+  transform: scale(0);
+  transition: cubic-bezier(.74, .02, .44, .78) 1s all;
+}
+
+.swiper-slide-active .client-image {
+
+  transition-duration: 650ms;
+  transition-delay: 250ms;
+  transform: scale(1)
+}
+
+.swiper-slide .client-name,
+.swiper-slide .client-job {
+  transform: translateY(-100%);
+  opacity: 0;
+
+}
+
+.swiper-slide-active .client-name,
+.swiper-slide-active .client-job {
+  transform: translateY(0);
+  opacity: 100;
+  transition-delay: 300ms;
+  transition-duration: 450ms;
+
+}
+
+
+
+
+.first .line {
+  position: relative;
+}
+
+.first .line-mask {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #F2EBFE;
+  opacity: 0.65;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+}
+
+
+
+
+[data-link-hover] {
+  position: relative;
+  overflow: hidden;
+}
+
+.swiper-slide-active .client-job {
+  transform: translateY(0%);
+  opacity: 100;
+  transition-delay: 200ms;
+  transition-duration: 650ms;
+
+}
+
+
+
+.rectangles--hide {
+  display: none;
+}
+
+
+
+.rectangles.remove-events,
+.works__rectangles {
+  display: block;
+}
+
+.rotate-center {
+  -webkit-animation: rotate-center 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) infinite both;
+  animation: rotate-center 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) infinite both;
+}
+
+@-webkit-keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.remove-events {
+  pointer-events: none;
+}
+
+.rectangle--space {
+  width: calc(20% - 1rem);
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+@keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+canvas {
+  position: absolute !important;
+  z-index: -1;
+}
+
+.dg.ac {
+  z-index: 99 !important;
+}
+
+body {
+  position: relative;
+}
+
+.work-bg {
+  transform: scale(1.18);
+}
+
+.work-bg:hover {
+  transform: scale(1.06);
+}
+
+/* 
+.creative.opened .solution-block {
+  width: 20rem;
+  height: 10rem;
+  transition: all 0.5s ease;
+} */
+
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.intro-heading_itself .line {
+  overflow: hidden;
+}
+
+.line {
+  overflow: hidden;
+}
+
+.work-bg-placeholder {
+  display: block;
+}
+
+.process-cards-wrapper {
+  pointer-events: none;
+}
+
+/*mobile media query*/
+@media screen and (max-width: 479px) {
+  .process-cards-wrapper {
+    pointer-events: auto;
+  }
+
+
 }

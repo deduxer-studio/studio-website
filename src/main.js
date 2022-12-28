@@ -1,8 +1,47 @@
-import animateTitle from './features/animateTitle'
-import createBadge from './features/createBasge'
+/* eslint-disable */
 import './styles/style.css'
+// import all code from components smooth
+import { initPageTransition } from './components/barba'
+import { initSmoothScroll } from './components/smooth'
 
-console.log('Welcome to Vite + JS + Webflow!')
+initPageTransition()
 
-createBadge()
-animateTitle()
+//############################################ CONTACT ############################################
+if (window.location.pathname === '/contact') {
+  console.log('contact');
+  import('./pages/contact').then((contact) => {
+    contact.initContact()
+  })
+}
+
+//############################################ HOME ############################################
+if (window.location.pathname === '/') {
+
+  import('./components/deduction').then((deduction) => {
+    deduction.initDeduction()
+  })
+
+  import('./components/mesh').then((mesh) => {
+    mesh.initMesh()
+  })
+  if (window.innerWidth < 768) {
+    //########## MOBILE ##########
+    import('./pages/indexMobile').then((home) => {
+      home.initMobile()
+      initSmoothScroll()
+    })
+
+  }
+  else {
+    //########## PC ##########
+    initSmoothScroll()
+    import('./pages/index').then((home) => {
+      home.initHome()
+    })
+
+  }
+}
+
+
+
+
