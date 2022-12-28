@@ -21,11 +21,7 @@ export default defineConfig({
         entryFileNames: 'main.js',
         esModule: false,
         compact: true,
-        globals: {
-          jquery: '$',
-        },
-      },
-      external: ['jquery'],
+      }
     },
   },
 })
