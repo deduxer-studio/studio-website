@@ -1,9 +1,10 @@
+/* eslint-disable */
 import { gsap } from 'gsap'
 import * as THREE from 'three'
 
 // Three JS Template
 
-export function initDeduction() {}
+export function initDeduction() { }
 function init() {
   createWorld()
   createLights()
