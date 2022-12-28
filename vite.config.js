@@ -19,7 +19,7 @@ export default defineConfig({
       input: './src/main.js',
       output: {
         entryFileNames: 'main.js',
-        esModule: true,
+        esModule: false,
         compact: true,
       }
     },
